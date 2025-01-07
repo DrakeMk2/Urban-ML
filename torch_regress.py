@@ -159,7 +159,7 @@ def main():
     - plot_results: визуализируем фактические и предсказанные результаты.
     """
     epochs = 100
-    learning_rate = 0.1
+    learning_rate = 0.01
     window_size = 30  # Число предыдущих дней для анализа
     horizon_size = 100  # Число дней для прогнозирования
 
