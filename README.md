@@ -44,7 +44,7 @@
 для её последующего тестирования. В результате модель научилась узнавать цифры с точностью 91.61% (92.04% при 21й итерации). 
 Для тренировки ей потребовалось около 30 секунд.
 
-![image]([https://github.com/user-attachments/assets/e2f8660c-d41d-4722-9eb9-aa02a8bf105d](https://github.com/DrakeMk2/Urban-ML/blob/main/Image/skikit_class.jpg))
+![image](https://github.com/DrakeMk2/Urban-ML/blob/main/Image/skikit_class.jpg)
 
 
 4. Реализация задачи регрессии путём Линейной Регрессии в SciKit-Learn.
@@ -54,7 +54,7 @@
 а 20% данных для её последующего тестирования. В результате модель научилась предсказывать дальнейшее движение курса валюты.
 Для тренировки ей потребовалось меньше секунды.
 
-![image]([https://github.com/user-attachments/assets/e2f8660c-d41d-4722-9eb9-aa02a8bf105d](https://github.com/DrakeMk2/Urban-ML/blob/main/Image/skikit_regress.jpeg))
+![image](https://github.com/DrakeMk2/Urban-ML/blob/main/Image/skikit_regress.jpeg)
 
 
 5. Реализация задачи классификации путём Логистической Регрессии в TensorFlow.
@@ -64,7 +64,7 @@
 для её последующего тестирования. В результате модель научилась узнавать цифры с точностью 95.65%. 
 Для тренировки ей потребовалось около минуты.
 
-![image]([https://github.com/user-attachments/assets/e2f8660c-d41d-4722-9eb9-aa02a8bf105d](https://github.com/DrakeMk2/Urban-ML/blob/main/Image/tensor_class.jpg))
+![image](https://github.com/DrakeMk2/Urban-ML/blob/main/Image/tensor_class.jpg)
 
 
 6. Реализация задачи регрессии путём Линейной Регрессии в TensorFlow.
@@ -74,7 +74,7 @@
 а 20% данных для её последующего тестирования. В результате модель научилась предсказывать дальнейшее движение курса валюты.
 Для тренировки ей потребовалось около 35 секунд.
 
-![image]([https://github.com/user-attachments/assets/e2f8660c-d41d-4722-9eb9-aa02a8bf105d](https://github.com/DrakeMk2/Urban-ML/blob/main/Image/tensor_regress.jpeg))
+![image](https://github.com/DrakeMk2/Urban-ML/blob/main/Image/tensor_regress.jpeg)
 
 
 7. Реализация задачи классификации путём Логистической Регрессии в PyTorch.
@@ -84,7 +84,7 @@
 а 20% данных для её последующего тестирования. В результате модель научилась узнавать цифры с точностью 97.92%. 
 Для тренировки ей требовалось чуть больше двух минут.
 
-![image]([https://github.com/user-attachments/assets/e2f8660c-d41d-4722-9eb9-aa02a8bf105d](https://github.com/DrakeMk2/Urban-ML/blob/main/Image/torch_class.jpg))
+![image](https://github.com/DrakeMk2/Urban-ML/blob/main/Image/torch_class.jpg)
 
 
 8. Реализация задачи регрессии путём Линейной Регрессии в PyTorch.
@@ -94,7 +94,7 @@
 а 20% данных для её последующего тестирования. В результате модель научилась предсказывать дальнейшее движение курса валюты.
 Для тренировки ей потребовалась одна секунда.
 
-![image]([https://github.com/user-attachments/assets/e2f8660c-d41d-4722-9eb9-aa02a8bf105d](https://github.com/DrakeMk2/Urban-ML/blob/main/Image/torch_regress.jpeg))
+![image](https://github.com/DrakeMk2/Urban-ML/blob/main/Image/torch_regress.jpeg)
 
 
 9. Заключение.
