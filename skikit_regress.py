@@ -3,6 +3,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
+from time import time
 
 
 def load_data(file_path):
@@ -110,7 +111,9 @@ def main():
     """
     window_size = 30  # Число предыдущих дней для анализа
     horizon_size = 100  # Число дней для прогнозирования
-
+    
+    start = time()  # Точка начала отсчета времени
+    print(f'Начинаем анализ данных...')
     dataset = load_data("BTC_data.csv")
     price, date = preprocess_data(dataset)
     train_price, test_price, train_date, test_date = split_data(price, date)
@@ -120,6 +123,9 @@ def main():
     x_test = x_test.reshape(-1, window_size)
     model = create_and_train_model(x_train, y_train)
     prediction = make_predictions(model, x_test)
+    end = time()  # Точка окончания отсчета времени
+    print(f'Анализ данных завершён.')
+    print(f'Время работы кода: {end - start} секунды.')
     plot_results(test_date[0:len(y_test)], y_test, prediction)
 
 
