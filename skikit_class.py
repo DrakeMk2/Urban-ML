@@ -3,6 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
+from time import time
 
 
 def load_data():
@@ -54,6 +55,7 @@ def evaluate_model(model, x_test, y_test):
     """
     predict = model.predict(x_test)
     accuracy = accuracy_score(y_test, predict)
+    print(f'Анализ данных завершён.')
     print(f'Точность модели: {accuracy * 100:.2f}%')
 
 
@@ -67,11 +69,15 @@ def main():
     - evaluate_model: оцениваем точность модели на тестовых данных.
     """
     iteration = 210
-
+    
+    start = time()  # Точка начала отсчета времени
+    print(f'Начинаем анализ данных...')
     x, y = load_data()
     x_train, x_test, y_train, y_test = preprocess_data(x, y)
     model = train_model(x_train, y_train, iteration)
     evaluate_model(model, x_test, y_test)
+    end = time()  # Точка окончания отсчета времени
+    print(f'Время работы кода: {end - start} секунды.')
 
 
 if __name__ == "__main__":  # Запуск основной функции
