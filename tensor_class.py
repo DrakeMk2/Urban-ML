@@ -4,8 +4,9 @@ from tensorflow.keras.optimizers import Adam
 from sklearn.model_selection import train_test_split
 from sklearn.datasets import fetch_openml
 from tensorflow.keras.utils import to_categorical
-
+from time import time
 import os
+
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'  # Устанавливаем уровень логирования (для скрытия предупреждений о моём CPU)
 
 
@@ -83,6 +84,7 @@ def evaluate_model(model, x_test, y_test):
     - print(accuracy): выводим точность модели в процентах.
     """
     loss, accuracy = model.evaluate(x_test, y_test)
+    print(f'Анализ данных завершён.')
     print(f'Точность модели: {accuracy * 100:.2f}%')
 
 
@@ -100,7 +102,9 @@ def main():
     """
     epochs = 10
     learning_rate = 0.01
-
+    
+    start = time()  # Точка начала отсчета времени
+    print(f'Начинаем анализ данных...')
     x, y = load_data()
     x_train, x_test, y_train, y_test = split_data(x, y)
     y_train, y_test = preprocess_data(y_train, y_test)
@@ -108,6 +112,8 @@ def main():
     optimizer = Adam(learning_rate=learning_rate)
     compile_and_train_model(model, x_train, y_train, epochs, optimizer)
     evaluate_model(model, x_test, y_test)
+    end = time()  # Точка окончания отсчета времени
+    print(f'Время работы кода: {end - start} секунды.')
 
 
 if __name__ == "__main__":  # Запуск основной функции
