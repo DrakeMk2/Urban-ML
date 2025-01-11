@@ -34,7 +34,7 @@
 набор статистических данных об изменениях курса биткоина за период с 2010 по 2024 год. В нем представлен 
 широкий разброс значений и длительный период наблюдения.
 	
-![image]([https://github.com/user-attachments/assets/e2f8660c-d41d-4722-9eb9-aa02a8bf105d](https://github.com/DrakeMk2/Urban-ML/blob/main/Image/mnist.jpg))
+[image]([https://github.com/user-attachments/assets/e2f8660c-d41d-4722-9eb9-aa02a8bf105d](https://github.com/DrakeMk2/Urban-ML/blob/main/Image/mnist.jpg))
 
 
 3. Реализация задачи классификации путём Логистической Регрессии в SciKit-Learn.
