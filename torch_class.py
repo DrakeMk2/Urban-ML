@@ -4,6 +4,7 @@ from torch.nn import Sequential, Flatten, Linear, ReLU, CrossEntropyLoss
 from torchvision.datasets import MNIST
 from torchvision.transforms import ToTensor
 from torch.utils.data import DataLoader
+from time import time
 
 
 def load_data():
@@ -90,6 +91,7 @@ def evaluate_model(model, test_data):
             total += labels.size(0)
             correct += (predict == labels).sum().item()
     accuracy = 100 * correct / total
+    print(f'Анализ данных завершён.')
     print(f'Точность модели: {accuracy:.2f}%')
 
 
@@ -107,13 +109,17 @@ def main():
     """
     epochs = 10
     learning_rate = 0.1
-
+    
+    start = time()  # Точка начала отсчета времени
+    print(f'Начинаем анализ данных...')
     train_loader, test_loader = load_data()
     model = create_model()
     criterion = CrossEntropyLoss()
     optimizer = optim.SGD(model.parameters(), lr=learning_rate)
     train_model(model, train_loader, criterion, optimizer, epochs)
     evaluate_model(model, test_loader)
+    end = time()  # Точка окончания отсчета времени
+    print(f'Время работы кода: {end - start} секунды.')
 
 
 if __name__ == "__main__":  # Запуск основной функции
